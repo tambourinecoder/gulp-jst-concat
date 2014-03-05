@@ -1,0 +1,42 @@
+{
+  "name": "gulp-jst-concat",
+  "version": "0.0.0",
+  "author": {
+    "name": "Tambourinecoder",
+    "email": "tambourinecoder@gmail.com",
+    "url": "https://github.com/tambourinecoder"
+  },
+  "license": "MIT",
+  "description": "Compile underscore/lodash view templates to a single JST file",
+  "keywords": [
+    "gulpplugin",
+    "jst",
+    "concat",
+    "template",
+    "lodash",
+    "underscore"
+  ],
+  "homepage": "https://github.com/tambourinecoder/gulp-jst-concat",
+  "bugs": "https://github.com/tambourinecoder/gulp-jst-concat/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tambourinecoder/gulp-jst-concat.git"
+  },
+  "main": "lib/index",
+  "scripts": {
+    "test": "node_modules/.bin/mocha test"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "dependencies": {
+    "gulp-util": "~2.2.14",
+    "through": "~2.3.4",
+    "lodash": "~2.4.1"
+  },
+  "devDependencies": {
+    "mocha-jshint": "0.0.7",
+    "chai": "~1.8.1",
+    "mocha": "~1.16.2"
+  }
+}

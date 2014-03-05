@@ -1,0 +1,17 @@
+{ "strict": true
+, "node": true
+, "globals": {}
+, "indent": 2
+, "laxcomma": true
+, "laxbreak": true
+, "asi": true
+, "onevar": false
+
+, "eqeqeq": true
+, "immed": true
+, "undef": true
+, "unused": true
+, "latedef": true
+, "trailing": true
+, "expr": true
+ }
