@@ -1,6 +1,6 @@
 {
   "name": "gulp-jst-concat",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": {
     "name": "Tambourinecoder",
     "email": "tambourinecoder@gmail.com",
@@ -30,13 +30,14 @@
     "node": ">=0.10.0"
   },
   "dependencies": {
-    "gulp-util": "~2.2.14",
-    "through": "~2.3.4",
-    "lodash": "~2.4.1"
+    "gulp-util": "~3.0.2",
+    "lodash": "~3.0.0",
+    "slash": "^1.0.0",
+    "through": "~2.3.6"
   },
   "devDependencies": {
-    "mocha-jshint": "0.0.7",
-    "chai": "~1.8.1",
-    "mocha": "~1.16.2"
+    "mocha-jshint": "0.0.9",
+    "chai": "~1.10.0",
+    "mocha": "~2.1.0"
   }
 }
