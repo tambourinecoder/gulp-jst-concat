@@ -19,7 +19,8 @@ gulp.task('JST', function () {
   gulp.src('client/app/views/**/*jade')
     .pipe(jade())
     .pipe(jstConcat('jst.js', {
-      renameKeys: ['^.*views/(.*).html$', '$1']
+      renameKeys: ['^.*views/(.*).html$', '$1'],
+      exportString: "this.JST"
     }))
     .pipe(gulp.dest('public/assets'))
 })
@@ -35,6 +36,8 @@ Given the example's option `renameKeys: ['^.*views/(.*).html$', '$1']` those vie
 will now be accessible as compiled [lodash](http://lodash.com/docs#template) template functions via
 - `JST['foo']` and
 - `JST['bar/baz']`.
+
+The `exportString` option makes it possible to put your compiled JST on to any object within your compiled template file. You can specify any object that is accessible to the file, `window.JST` or `module.exports` if you want to use it with browserify.
 
 (Please note that `gulp-jst-concat` doesn't have to be used in conjunction with `gulp-jade`. Any input-stream emitting html-ish file contents will do.)
 
