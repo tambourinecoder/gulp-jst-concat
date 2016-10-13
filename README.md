@@ -20,7 +20,8 @@ gulp.task('JST', function () {
     .pipe(jade())
     .pipe(jstConcat('jst.js', {
       renameKeys: ['^.*views/(.*).html$', '$1'],
-      exportString: "this.JST"
+      exportString: "this.JST",
+	  requireLoDash: false
     }))
     .pipe(gulp.dest('public/assets'))
 })
@@ -38,6 +39,8 @@ will now be accessible as compiled [lodash](http://lodash.com/docs#template) tem
 - `JST['bar/baz']`.
 
 The `exportString` option makes it possible to put your compiled JST on to any object within your compiled template file. You can specify any object that is accessible to the file, `window.JST` or `module.exports` if you want to use it with browserify.
+
+The `requireLoDash` option adds a require statement to include [lodash](https://lodash.com). This helps when you're running your code through a transpiler/concatenator and don't include `_` on the `window` object.
 
 (Please note that `gulp-jst-concat` doesn't have to be used in conjunction with `gulp-jade`. Any input-stream emitting html-ish file contents will do.)
 
