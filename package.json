@@ -1,6 +1,6 @@
 {
 	"name": "gulp-jst-concat",
-	"version": "0.1.1",
+	"version": "0.1.2",
 	"author": {
 		"name": "Patrick Gunderson",
 		"email": "patrickgunderson@gmail.com",
@@ -8,7 +8,7 @@
 	},
 	"license": "MIT",
 	"description": "Compile underscore/lodash view templates to a single JST file",
-	"keywords": ["gulpplugin", "jst", "concat", "template", "lodash", "underscore"],
+	"keywords": ["gulp", "plugin", "jst", "concat", "template", "lodash", "underscore"],
 	"homepage": "https://github.com/gunderson/gulp-jst-concat",
 	"bugs": "https://github.com/gunderson/gulp-jst-concat/issues",
 	"repository": {
