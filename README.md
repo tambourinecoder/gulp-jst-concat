@@ -21,7 +21,8 @@ gulp.task('JST', function () {
     .pipe(jstConcat('jst.js', {
       renameKeys: ['^.*views/(.*).html$', '$1'],
       exportString: "this.JST",
-	  requireLoDash: false
+	  requireLoDash: false,
+	  execTemplateFn: [ arguments ]
     }))
     .pipe(gulp.dest('public/assets'))
 })
@@ -42,6 +43,8 @@ The `exportString` option makes it possible to put your compiled JST on to any o
 
 The `requireLoDash` option adds a require statement to include [lodash](https://lodash.com). This helps when you're running your code through a transpiler/concatenator and don't include `_` on the `window` object.
 
+The `execTemplateFn` option was added to continue compatibility with [pug][]. Later versions return a string-building function that must be executed to get the proper template string. Pass an array of arguments to be applied to the string-building function. Supplying a non-array to `execTemplateFn` causes the object or value supplied to be passed to the string-building function as it's first argument.
+
 (Please note that `gulp-jst-concat` doesn't have to be used in conjunction with `gulp-jade`. Any input-stream emitting html-ish file contents will do.)
 
 
@@ -58,3 +61,5 @@ This will default to `['.*', '$&']` (i.e. a template's key will just be it's inp
 
 ## License
 MIT
+
+[pug]: http://pugjs.org
