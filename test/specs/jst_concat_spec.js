@@ -2,7 +2,7 @@
 /* global expect, describe, context, it */
 "use strict";
 
-var File = require('gulp-util').File
+var Vinyl = require('vinyl')
   , vm = require('vm')
 
 function runInSandbox (str) {
@@ -13,7 +13,7 @@ function runInSandbox (str) {
 
 function makeFile (path, contents) {
   var buffer = new Buffer(String(contents))
-  return new File({ path: path, contents: buffer })
+  return new Vinyl({ path: path, contents: buffer })
 }
 
 function writeFiles (stream, files, callback) {
